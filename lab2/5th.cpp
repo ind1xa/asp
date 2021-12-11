@@ -28,7 +28,7 @@ int main (void) {
     int a;
     srand((unsigned)time(0));
     for (int i = 0; i < 10; i++) {
-        a = rand()%10;
+        a = rand()%10 + 1;
         s.stavi(a);
         //cout << a;
     }
@@ -38,6 +38,6 @@ int main (void) {
     }
     //cout << endl;
     for (int i = 0; i < 10; i++) {
-        if (pomocni.uzmi(a)) cout << a;
+        if (pomocni.uzmi(a)) cout << a << " ";
     }
 }
