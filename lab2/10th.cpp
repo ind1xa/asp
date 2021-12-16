@@ -20,7 +20,8 @@ void selection2Sort (int A[], int n, char smjer) {
                 if (A[j] > A[max]) max = j;
             }
             Swap(&A[i], &A[min]);
-            if (i != max || n-1-i != min) Swap(&A[n-1-i], &A[max]);
+            if (max == i) Swap(&A[n-1-i], &A[min]);
+            else Swap(&A[n-1-i], &A[max]);
         }
     }
     if (smjer == '1') {
@@ -32,7 +33,8 @@ void selection2Sort (int A[], int n, char smjer) {
                 if (A[j] > A[max]) max = j;
             }
             Swap(&A[i], &A[max]);
-            if (i != min || n-1-i != max) Swap(&A[n-1-i], &A[min]);
+            if (min == i) Swap(&A[n-1-i], &A[max]);
+            else Swap(&A[n-1-i], &A[min]);
         }
     }
 }
